@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Neto | Nutrição Avançada</title>
+    
+    <!-- Tailwind CSS (Estilos) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Fontes e Configurações Extras -->
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        ::selection { background-color: #bbf7d0; color: #14532d; }
+        
+        .fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navegação -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="https://i.ibb.co/b53WJXsm/Whats-App-Image-2025-11-25-at-17-31-55-1.jpg" alt="Carlos Neto Logo" class="h-12 w-auto object-contain">
+            </div>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#sobre" class="hover:text-green-600 transition">Sobre</a>
+                <a href="#metodo" class="hover:text-green-600 transition">Método</a>
+                <a href="#planos" class="hover:text-green-600 transition">Planos</a>
+            </div>
+
+            <!-- Botão -->
+            <button onclick="openModal()" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full font-bold text-sm transition transform hover:scale-105 shadow-md shadow-green-200">
+                Consultoria Online
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <!-- Background Blobs -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-green-200/40 rounded-full blur-3xl opacity-50 mix-blend-multiply"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-gray-200/40 rounded-full blur-3xl opacity-50 mix-blend-multiply"></div>
+
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-white rounded-full px-3 py-1 text-xs font-semibold text-green-700 border border-green-200 shadow-sm">
+                    <i data-lucide="award" class="w-4 h-4 text-green-600"></i>
+                    <span>Nutrição Avançada & Alta Performance</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900">
+                    Transforme seu corpo com a <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-400">ciência de um campeão</span>.
+                </h1>
+                <p class="text-lg text-gray-600 leading-relaxed max-w-lg">
+                    Nutricionista Esportivo, Treinador e Atleta. Una disciplina militar, ciência nutricional e experiência prática para atingir o físico que você sempre quis.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button onclick="openModal()" class="flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg shadow-green-200">
+                        Começar Agora <i data-lucide="chevron-right" class="ml-2"></i>
+                    </button>
+                    <a href="#planos" class="flex items-center justify-center bg-white border-2 border-gray-200 hover:border-green-600 text-gray-700 hover:text-green-600 px-8 py-4 rounded-lg font-bold text-lg transition">
+                        Ver Planos
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Foto Principal -->
+            <div class="relative h-[500px] w-full rounded-2xl overflow-hidden border-2 border-white shadow-2xl shadow-gray-200/50 flex items-center justify-center group md:rotate-2 hover:rotate-0 transition duration-500">
+                <img src="https://i.ibb.co/7dXtcr0X/Whats-App-Image-2025-11-25-at-16-39-12.jpg" alt="Carlos Neto" class="w-full h-full object-cover object-top">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-100 shadow-xl shadow-gray-100/50">
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="w-10 h-1 bg-green-500 mr-4 rounded-full"></span>
+                            O Especialista
+                        </h2>
+                        <h3 class="text-2xl font-bold text-green-700">Carlos Neto</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 shrink-0"></i> Nutricionista Esportivo (CRN-1 27160)</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 shrink-0"></i> Treinador (CMBF)</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 shrink-0"></i> Atleta e Preparador de Fisiculturismo</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 shrink-0"></i> Policial Militar (Disciplina e Estratégia)</li>
+                        </ul>
+                        <p class="text-gray-600 leading-relaxed font-medium">
+                            "Acredito que o corpo ideal é resultado de constância, planejamento e disciplina inteligente. Fazer dieta não precisa ser uma tortura. Deve ser um processo simples, flexível e duradouro."
+                        </p>
+                    </div>
+                    
+                    <!-- Segunda Foto -->
+                    <div class="relative h-[400px] w-full rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
+                        <img src="https://i.ibb.co/39LZ8PGw/Whats-App-Image-2025-11-25-at-16-39-13-1.jpg" alt="Carlos Neto Atleta" class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+
+                <!-- Cards Ícones -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center justify-center text-center hover:border-green-300 hover:shadow-md transition duration-300 group">
+                        <i data-lucide="utensils" class="text-green-500 mb-3 group-hover:scale-110 transition"></i>
+                        <span class="font-semibold text-gray-800 text-sm">Emagrecimento</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center justify-center text-center hover:border-green-300 hover:shadow-md transition duration-300 group">
+                        <i data-lucide="dumbbell" class="text-green-500 mb-3 group-hover:scale-110 transition"></i>
+                        <span class="font-semibold text-gray-800 text-sm">Hipertrofia</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center justify-center text-center hover:border-green-300 hover:shadow-md transition duration-300 group">
+                        <i data-lucide="target" class="text-green-500 mb-3 group-hover:scale-110 transition"></i>
+                        <span class="font-semibold text-gray-800 text-sm">Alta Performance</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center justify-center text-center hover:border-green-300 hover:shadow-md transition duration-300 group">
+                        <i data-lucide="shield-check" class="text-green-500 mb-3 group-hover:scale-110 transition"></i>
+                        <span class="font-semibold text-gray-800 text-sm">Longevidade</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Método Section -->
+    <section id="metodo" class="py-20 bg-gray-50 relative">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Mais que uma dieta, <span class="text-green-600">uma estratégia.</span></h2>
+                <p class="text-gray-600 text-lg">
+                    Minha consultoria vai muito além de um papel com alimentos. Você recebe suporte contínuo para garantir que a teoria funcione na sua realidade.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl border-l-4 border-green-500 shadow-md hover:shadow-xl transition-all duration-300">
+                    <span class="text-5xl font-black text-green-100 mb-4 block">01</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Planejamento Individual</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Avaliação detalhada da sua rotina, preferências e metabolismo para criar um plano que você consiga seguir.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl border-l-4 border-green-500 shadow-md hover:shadow-xl transition-all duration-300">
+                    <span class="text-5xl font-black text-green-100 mb-4 block">02</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Acompanhamento Contínuo</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Não te entrego o plano e sumo. Estarei disponível para tirar dúvidas e ajustar a rota quando necessário.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl border-l-4 border-green-500 shadow-md hover:shadow-xl transition-all duration-300">
+                    <span class="text-5xl font-black text-green-100 mb-4 block">03</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Ajustes Inteligentes</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Avaliações periódicas (fotos, medidas, peso) para evitar estagnação e garantir evolução constante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos Section -->
+    <section id="planos" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Escolha seu Plano de Evolução</h2>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Card Simples -->
+                <div class="relative p-6 rounded-2xl border-2 border-gray-200 flex flex-col h-full bg-white transition-all duration-300 hover:border-green-300 hover:shadow-lg">
+                    <h3 class="text-lg font-bold text-gray-700 mb-2">Treino Avulso</h3>
+                    <div class="mb-6">
+                        <span class="text-sm text-gray-500">R$</span>
+                        <span class="text-5xl font-extrabold text-gray-900">110</span>
+                        <span class="text-sm text-gray-500">,00</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Periodização completa</li>
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Único envio</li>
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Foco em técnica</li>
+                    </ul>
+                    <button onclick="openModal()" class="w-full py-3 rounded-lg font-bold text-sm transition shadow-sm bg-white border-2 border-gray-200 text-gray-700 hover:border-green-500 hover:text-green-600">Escolher Plano</button>
+                </div>
+
+                <!-- Card Simples -->
+                <div class="relative p-6 rounded-2xl border-2 border-gray-200 flex flex-col h-full bg-white transition-all duration-300 hover:border-green-300 hover:shadow-lg">
+                    <h3 class="text-lg font-bold text-gray-700 mb-2">Nutricional</h3>
+                    <div class="mb-6">
+                        <span class="text-sm text-gray-500">R$</span>
+                        <span class="text-5xl font-extrabold text-gray-900">180</span>
+                        <span class="text-sm text-gray-500">,00</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Plano alimentar individual</li>
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Ajustes mensais</li>
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Suporte a dúvidas</li>
+                    </ul>
+                    <button onclick="openModal()" class="w-full py-3 rounded-lg font-bold text-sm transition shadow-sm bg-white border-2 border-gray-200 text-gray-700 hover:border-green-500 hover:text-green-600">Escolher Plano</button>
+                </div>
+
+                <!-- Card Popular (Completo) -->
+                <div class="relative p-6 rounded-2xl border-2 border-green-500 flex flex-col h-full bg-white transition-all duration-300 transform md:-translate-y-2 shadow-xl shadow-green-100/50">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                        Mais Escolhido
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-700 mb-2">Plano Completo</h3>
+                    <div class="mb-6">
+                        <span class="text-sm text-gray-500">R$</span>
+                        <span class="text-5xl font-extrabold text-gray-900">250</span>
+                        <span class="text-sm text-gray-500">,00</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Dieta Personalizada</li>
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Treino Periodizado</li>
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Ajustes de Cargas</li>
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Melhor Custo-Benefício</li>
+                    </ul>
+                    <button onclick="openModal()" class="w-full py-3 rounded-lg font-bold text-sm transition shadow-sm bg-green-600 hover:bg-green-700 text-white">Escolher Plano</button>
+                </div>
+
+                <!-- Card Preparação -->
+                <div class="relative p-6 rounded-2xl border-2 border-gray-200 flex flex-col h-full bg-white transition-all duration-300 hover:border-green-300 hover:shadow-lg">
+                    <h3 class="text-lg font-bold text-gray-700 mb-2">Preparação Atleta</h3>
+                    <div class="mb-6">
+                        <span class="text-sm text-gray-500">R$</span>
+                        <span class="text-5xl font-extrabold text-gray-900">350</span>
+                        <span class="text-sm text-gray-500">,00</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Pré-contest</li>
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Estratégia avançada</li>
+                        <li class="flex items-start text-sm text-gray-600"><i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-3 mt-1 shrink-0"></i> Acompanhamento diário</li>
+                    </ul>
+                    <button onclick="openModal()" class="w-full py-3 rounded-lg font-bold text-sm transition shadow-sm bg-white border-2 border-gray-200 text-gray-700 hover:border-green-500 hover:text-green-600">Escolher Plano</button>
+                </div>
+            </div>
+
+            <div class="mt-12 p-8 bg-green-50 border border-green-100 rounded-2xl text-center shadow-sm">
+                <h3 class="text-xl font-bold text-green-800 mb-4">Descontos Progressivos para Planos Longos</h3>
+                <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base text-gray-700">
+                    <span class="bg-white px-4 py-2 rounded-lg border border-green-200 shadow-sm">Trimestral: <span class="text-green-700 font-bold">10% OFF</span></span>
+                    <span class="bg-white px-4 py-2 rounded-lg border border-green-200 shadow-sm">Semestral: <span class="text-green-700 font-bold">15% OFF</span></span>
+                    <span class="bg-white px-4 py-2 rounded-lg border border-green-200 shadow-sm">Anual: <span class="text-green-700 font-bold">20% OFF</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 text-center flex flex-col items-center">
+            <div class="mb-6">
+                <img src="https://i.ibb.co/b53WJXsm/Whats-App-Image-2025-11-25-at-17-31-55-1.jpg" alt="Carlos Neto Logo" class="h-16 w-auto object-contain transition transform hover:scale-105">
+            </div>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-400 hover:text-green-600 transition"><i data-lucide="instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-green-600 transition"><i data-lucide="facebook"></i></a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                © 2025 Carlos Neto Consultoria. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal Formulario -->
+    <div id="modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative fade-in">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 p-2 rounded-full transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Próximos Passos</h2>
+                <div class="w-12 h-1 bg-green-500 mb-6 rounded-full"></div>
+
+                <div class="space-y-4 mb-8 text-gray-600 text-sm bg-green-50 p-6 rounded-xl border border-green-100">
+                    <p><strong class="text-green-700">1.</strong> Para iniciarmos, preencha o formulário abaixo. Conhecerei seu perfil e histórico.</p>
+                    <p><strong class="text-green-700">2.</strong> Ao clicar em enviar, você será direcionado ao meu WhatsApp.</p>
+                    <p><strong class="text-green-700">3.</strong> Lá, envie suas fotos (Homens: short / Mulheres: biquíni).</p>
+                    <p><strong class="text-green-700">4.</strong> Após análise das fotos, agendaremos o bate-papo.</p>
+                </div>
+
+                <form onsubmit="submitForm(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                        <input required type="text" id="name" class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition" placeholder="Seu nome">
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Idade</label>
+                            <input required type="number" id="age" class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition" placeholder="Anos">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp</label>
+                            <input required type="tel" id="phone" class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition" placeholder="(DDD) 99999-9999">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Objetivo Principal</label>
+                        <select id="goal" class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition">
+                            <option value="Hipertrofia">Hipertrofia (Ganho de Massa)</option>
+                            <option value="Emagrecimento">Emagrecimento (Perda de Gordura)</option>
+                            <option value="Performance">Alta Performance / Atleta</option>
+                            <option value="Saude">Saúde e Reeducação Alimentar</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 rounded-lg flex items-center justify-center transition mt-4 shadow-md">
+                        <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                        Enviar e Abrir WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Funcionalidade -->
+    <script>
+        // Inicializa os ícones
+        lucide.createIcons();
+
+        // Configuração do WhatsApp
+        const WHATSAPP_NUMBER = "5561999999999"; // ALTERE AQUI SEU NUMERO
+
+        // Modal Logic
+        function openModal() {
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        // Fecha modal ao clicar fora
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // Form Logic
+        function submitForm(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const phone = document.getElementById('phone').value;
+            const goal = document.getElementById('goal').value;
+
+            const message = `*NOVA SOLICITAÇÃO DE CONSULTORIA*\n\n` +
+                `👤 *Nome:* ${name}\n` +
+                `🎂 *Idade:* ${age}\n` +
+                `📱 *Telefone:* ${phone}\n` +
+                `🎯 *Objetivo:* ${goal}\n\n` +
+                `Olá Carlos! Preenchi o formulário na sua página e gostaria de agendar a avaliação inicial. Já estou ciente sobre as fotos necessárias.`;
+
+            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message
